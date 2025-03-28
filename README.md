@@ -2,6 +2,7 @@
 This is an example project that uses [Strife](https://strife.app/) on [Actix](https://actix.rs/).
 
 ## Technologies and frameworks
+* [Strife](https://strife.app) as content provider
 * [Actix](https://actix.rs/) as the backing server
 * [Maud](https://maud.lambda.xyz/) as the HTML template engine
 * [Alpine.js](https://alpinejs.dev/) JS library for reactivity/real-time preview (_Only included when compiled with the `realtime` feature_)
