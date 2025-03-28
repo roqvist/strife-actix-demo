@@ -1,0 +1,27 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install ssl deps
+      run: sudo apt install -y libssl-dev pkg-config
+    - name: Get Tailwind CLI
+      run: |
+        sudo wget https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.17/tailwindcss-linux-x64 && \
+          sudo chmod +x ./tailwindcss-linux-x64 && \
+          sudo mv ./tailwindcss-linux-x64 /usr/bin
+    - name: Build
+      run: cargo build --verbose
