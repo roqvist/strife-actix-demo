@@ -9,7 +9,7 @@ This is an example project that uses [Strife](https://strife.app/) on [Actix](ht
 
 ## Requirements
 * [Rust](https://www.rust-lang.org/tools/install)
-* [TailwindCSS 4 CLI](https://github.com/tailwindlabs/tailwindcss/releases/latest) available on `$PATH`
+* [TailwindCSS 4 CLI](https://github.com/tailwindlabs/tailwindcss/releases/latest) available on `$PATH` as binary `tailwindcss`
 * Some SSL dependencies for secure RavenDB communications on Linux:
 ```
 sudo apt-get install libssl-dev pkg-config
@@ -30,7 +30,7 @@ Prepare an `.env` file in the folder root. It must contain the following:
 ### Verify TailwindCSS 4 CLI
 This project uses the standalone [TailwindCSS 4 CLI](https://github.com/tailwindlabs/tailwindcss/releases/latest) to search through source code and generate a CSS. This is performed by the Rust build script (`build.rs`) from `input.css`.
 
-Make sure that the TailwindCSS CLI is available or modify the command in `build.rs` to use whatever method you want to generate the CSS.
+Make sure that the TailwindCSS CLI is available with `tailwindcss` or modify the command in `build.rs` to use whatever method you want to generate the CSS.
 
 ### Build or run
 #### Without JS/realtime preview
