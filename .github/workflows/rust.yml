@@ -20,8 +20,8 @@ jobs:
       run: sudo apt install -y libssl-dev pkg-config
     - name: Get Tailwind CLI
       run: |
-        sudo wget https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.17/tailwindcss-linux-x64 && \
-          sudo chmod +x ./tailwindcss-linux-x64 && \
-          sudo mv ./tailwindcss-linux-x64 /usr/bin
+        wget https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.17/tailwindcss-linux-x64
+        chmod +x tailwindcss-linux-x64
+        mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
     - name: Build
       run: cargo build --verbose
