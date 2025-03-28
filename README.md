@@ -9,6 +9,7 @@ This is an example project that uses [Strife](https://strife.app/) on [Actix](ht
 * [TailwindCSS 4](https://tailwindcss.com/) for CSS (_Note: Uses the [Standalone Tailwind CLI](https://github.com/tailwindlabs/tailwindcss/releases/latest), no Node/NPM in this project_)
 
 ## Requirements
+* Access to a [Strife](https://strife.app) workspace
 * [Rust](https://www.rust-lang.org/tools/install)
 * [TailwindCSS 4 CLI](https://github.com/tailwindlabs/tailwindcss/releases/latest) available on `$PATH` as binary `tailwindcss`
 * Some SSL dependencies for secure RavenDB communications on Linux:
