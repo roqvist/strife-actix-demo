@@ -10,6 +10,10 @@ This is an example project that uses [Strife](https://strife.app/) on [Actix](ht
 ## Requirements
 * [Rust](https://www.rust-lang.org/tools/install)
 * [TailwindCSS 4 CLI](https://github.com/tailwindlabs/tailwindcss/releases/latest) available on `$PATH`
+* Some SSL dependencies for secure RavenDB communications on Linux:
+```
+sudo apt-get install libssl-dev pkg-config
+```
 * For localhost HTTPS, and Strife port redirect, use your reverse proxy of choice. I like [Caddy](https://caddyserver.com/):
 ```
 caddy reverse-proxy --from localhost:4322 --to localhost:8080
